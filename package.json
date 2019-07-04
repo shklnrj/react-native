@@ -137,7 +137,9 @@
     "test-android-all": "yarn run docker-build-android && yarn run test-android-run-unit && yarn run test-android-run-instrumentation && yarn run test-android-run-e2e",
     "test-android-instrumentation": "yarn run docker-build-android && yarn run test-android-run-instrumentation",
     "test-android-unit": "yarn run docker-build-android && yarn run test-android-run-unit",
-    "test-android-e2e": "yarn run docker-build-android && yarn run test-android-run-e2e"
+    "test-android-e2e": "yarn run docker-build-android && yarn run test-android-run-e2e",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "bin": {
     "react-native": "local-cli/wrong-react-native.js"
@@ -196,7 +198,8 @@
     "ws": "^1.1.0",
     "xcode": "^0.9.1",
     "xmldoc": "^0.4.0",
-    "yargs": "^9.0.0"
+    "yargs": "^9.0.0",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "@babel/core": "7.0.0-beta.47",
@@ -220,5 +223,6 @@
     "react-test-renderer": "16.3.2",
     "shelljs": "^0.7.8",
     "sinon": "^2.2.0"
-  }
+  },
+  "snyk": true
 }
